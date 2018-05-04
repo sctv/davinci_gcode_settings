@@ -1,0 +1,13 @@
+;Sliced at: {day} {date} {time}
+;Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density} {travel_speed} Infill: {infill_speed} Outer: {Outer_shell_speed} Inner {Inner_shell_speed} Bottom:{Bottom_layer_speed} Retraction:{retraction_speed} flow:{Filament_Flow}
+;Print time: {print_time}
+;Filament used: {filament_amount}m {filament_weight}g
+;Filament cost: {filament_cost}
+G21        ;metric values
+G90        ;absolute positioning
+M82        ;set extruder to absolute mode
+M107       ;start with the fan off
+G1 Z10.0 F{travel_speed} ;move the platform down 15mm
+G92 E0                  ;zero the extruded length
+G1 F200 E10             ;extrude 10mm of feed stock
+G92 E0                  ;zero the extruded length again
